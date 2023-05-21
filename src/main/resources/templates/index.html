@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Database of users</h1>
+
+    <h2>What do you want to do?</h2>
+    <a href="/add">Add person</a>
+    <a href="">Remove person</a>
+    <a href="">Search for person</a>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Surname</td>
+                <td>Id</td>
+                <td>Age</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="person : ${people}">
+                <td th:text="${person.getName()}"></td>
+                <td th:text="${person.getSurname()}"></td>
+                <td th:text="${person.getIdentificationNumber()}"></td>
+                <td>Age</td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>
