@@ -8,6 +8,7 @@ public class Person {
     private final String identificationNumber;
     private final boolean bornBefore2000;
 
+
     public Person(String name, String surname, String identificationNumber, boolean bornBefore2000) {
         this.name = name;
         this.surname = surname;
