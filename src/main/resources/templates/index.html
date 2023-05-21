@@ -22,7 +22,6 @@
                 <td>Name</td>
                 <td>Surname</td>
                 <td>Id</td>
-                <td>Age</td>
             </tr>
         </thead>
         <tbody>
@@ -30,10 +29,25 @@
                 <td th:text="${person.getName()}"></td>
                 <td th:text="${person.getSurname()}"></td>
                 <td th:text="${person.getIdentificationNumber()}"></td>
-                <td>Age</td>
             </tr>
         </tbody>
 
+
     </table>
+    <form action="/add" method="post">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name">
+
+        <label for="surname">Surname: </label>
+        <input type="text" name="surname" id="surname">
+
+        <label for="id">Id: </label>
+        <input type="text" name="identificationNumber" id="id">
+
+        <label for="bornBefore2000">Born before 2000? </label>
+        <input type="checkbox" name="bornBefore2000" id="bornBefore2000">
+
+        <button>Submit</button>
+    </form>
 </body>
 </html>

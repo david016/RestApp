@@ -36,4 +36,8 @@ public class Person {
     public String getIdentificationNumber() {
         return identificationNumber;
     }
+
+    public boolean isBornBefore2000() {
+        return bornBefore2000;
+    }
 }
